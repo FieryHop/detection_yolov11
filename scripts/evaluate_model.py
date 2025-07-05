@@ -7,9 +7,9 @@ import numpy as np
 
 
 def extract_metric(value):
-    """Извлекает скалярное значение из метрики, которая может быть массивом"""
+    
     if isinstance(value, (list, np.ndarray)):
-        return float(value[0])  # Берем первый элемент массива
+        return float(value[0]) 
     return float(value)
 
 
