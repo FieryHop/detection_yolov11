@@ -1,0 +1,18 @@
+model: yolov11s.pt
+data: dataset.yaml
+epochs: 100
+imgsz: 640
+batch: 16
+
+# Параметры разделения данных
+val_fraction: 0.15
+test_fraction: 0.1
+
+# Оптимизация
+optimizer: auto
+lr0: 0.01
+cos_lr: true
+augment: true
+patience: 30
+dropout: 0.2
+weight_decay: 0.0005

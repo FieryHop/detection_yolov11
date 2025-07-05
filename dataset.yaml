@@ -1,0 +1,11 @@
+names:
+- pizza
+- soup
+- salad
+- steak
+- dessert
+nc: 5
+path: C:\Users\Admin\Desktop\detection_yolov11\dataset
+test: images/test
+train: images/train
+val: images/val

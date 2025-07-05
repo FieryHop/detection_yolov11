@@ -1,0 +1,20 @@
+dataset:
+  # Определяем классы еды, которые нам интересны
+  food_classes: ["pizza", "soup", "salad", "steak", "dessert", "hamburger", "sandwich",
+                 "pasta", "ice_cream", "cake", "donut", "apple", "banana", "orange"]
+
+  classes: ["pizza", "soup", "salad", "steak", "dessert"]  # Наши целевые классы
+  raw_videos_dir: "data/raw_videos"
+  frames_dir: "data/extracted_frames"
+  annotations_dir: "data/annotated_food"  # Новая папка для аннотаций еды
+  augmented_dir: "data/augmented_food"
+  auto_annotate_model: "yolov11s-food101.pt"
+
+  # Параметры аугментации
+  augmentation:
+    enabled: true
+    transforms:
+      - HorizontalFlip: {p: 0.5}
+      - RandomBrightnessContrast: {brightness_limit: 0.2, contrast_limit: 0.2, p: 0.5}
+      - HueSaturationValue: {hue_shift_limit: 20, sat_shift_limit: 30, val_shift_limit: 20, p: 0.5}
+    augment_count: 3

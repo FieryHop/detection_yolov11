@@ -1,0 +1,54 @@
+# Данные
+data/raw_videos/
+data/extracted_frames/
+data/annotated*/
+data/augmented*/
+data/manual_annotations/
+data/final_annotations/
+dataset/
+
+# Модели и веса
+models/trained/
+models/pretrained/*.pt
+!models/pretrained/.gitkeep  # Сохранить пустую папку
+
+# CVAT и Docker
+cvat/
+docker-compose.yml
+.env
+
+# Временные файлы
+*.cache
+*.tmp
+*.log
+*.pkl
+
+# Результаты обучения и оценки
+runs/
+outputs/
+
+# Виртуальное окружение
+venv/
+.env
+*.env
+
+# Системные файлы
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Jupyter notebooks
+*.ipynb_checkpoints
+
+# Файлы конфигурации (кроме основных)
+configs/train_params.yaml.backup
+configs/data_config.yaml.backup
+
+# Локальные копии датасетов
+*.zip
+*.tar
