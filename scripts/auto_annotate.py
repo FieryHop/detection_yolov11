@@ -16,7 +16,7 @@ def auto_annotate(config_path):
     model_path = "models/pretrained/yolov11s.pt"
     if not os.path.exists(model_path):
         # Если модель не скачана - скачиваем
-        model = YOLO("https://github.com/ultralytics/assets/releases/download/v0.0.0/yolov11s-food101.pt")
+        model = YOLO("https://github.com/ultralytics/assets/releases/download/v8.3.0/yolo11s.pt")
         model.export(format="pt", name=model_path)
     else:
         model = YOLO(model_path)
