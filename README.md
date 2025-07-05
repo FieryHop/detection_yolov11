@@ -50,10 +50,13 @@ docker exec -it cvat_server bash -ic 'python3 manage.py createsuperuser'
 ⚠️ Автоматическая аннотация находится в разработке и может требовать ручной корректировки
 
 ```bash
-python scripts/download_food_model.py
-python scripts/auto_annotate_food.py
+python scripts/auto_annotate.py
 ```
 ### 2. Обработка данных
+* Скачайте yolov11
+    ```bash
+    python scripts/download_models.py
+    ```
 * Объедините аннотации:
 
     ```bash
